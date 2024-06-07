@@ -1,0 +1,16 @@
+class Demo
+{
+    public static void main(String[] args) {
+        int[] arr1=new int[5];
+        
+        Scanner in=new Scanner(System.in);
+        for(int i=0;i<5;i++)
+        {
+            arr1[i]=in.nextInt();
+            
+        }
+        Arrays.sort(arr1);
+        System.out.println("First 2 Max elements: "+arr1[arr1.length- 1]+" "+arr1[arr1.length - 2]);
+        System.out.println("First 2 Min elements: "+arr1[0]+" "+arr1[1]);
+    }
+}
