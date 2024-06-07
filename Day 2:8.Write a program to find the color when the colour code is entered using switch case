@@ -1,0 +1,27 @@
+class Demo
+{
+    public static void main(String args[])
+    {
+        char x;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the color code:");
+        x=sc.next().charAt(0);
+        switch (x) {
+            case 'r':
+            System.out.println("red"); 
+                break;
+            case 'b':
+                System.out.println("blue"); 
+                    break;
+            case 'o':
+            System.out.println("orange"); 
+                break;
+            case 'g':
+            System.out.println("green"); 
+                break;
+        
+            default:
+            System.out.println("invalid");
+                break;
+        }
+    }
