@@ -1,0 +1,23 @@
+import java.util.*;
+class Demo
+{
+    public static void main(String args[])
+    {
+        int x;
+        int y;
+        Scanner s =new Scanner(System.in);
+        System.out.println("enter the two number:");
+        x=s.nextInt();
+        y=s.nextInt();
+        int dig1=x%10;
+        int dig2=y%10; 
+        if(dig1==dig2)
+        {
+            System.out.println("true");
+        }
+        else
+        {
+            System.out.println("false");
+}
+}
+}
