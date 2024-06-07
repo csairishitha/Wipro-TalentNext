@@ -1,0 +1,34 @@
+class Demo {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int[][] array = {{3, 8,5}, {7, 2,4},{5,12,1},};
+
+        // Check if the number of elements is less than 9
+        if (array.length != 3 || array[0].length != 3 || array[1].length != 3 || array[2].length!=3) {
+            System.out.println("please enter all elements");
+            return;
+        }
+
+              
+
+        // Reverse the 2D array
+        int[][] reversedArray = new int[3][3];
+        int index = 0;
+        for (int i = 2; i >= 0; i--) {
+            for (int j = 2; j >= 0; j--) {
+                reversedArray[i][j] = array[index / 3][index % 3];
+                index++;
+            }
+        }
+
+        // Print the reversed array
+        System.out.println("The reversed 2D array is:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(reversedArray[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
