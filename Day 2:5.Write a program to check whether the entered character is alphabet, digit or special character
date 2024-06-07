@@ -1,0 +1,20 @@
+class Demo
+{
+    public static void main(String args[])
+    {
+        char x=6;
+        if(x>='a' && x<='z'||x>='A' && x<='Z')
+        {
+            System.out.println("the character "+x+" is an alphabet");
+        }
+        else if(x>=0 && x<=9)
+        {
+            System.out.println("the character "+x+" is a digit");
+        }
+        else
+        {
+            System.out.println("the character "+x+" is a special character");
+        }
+        
+    }
+}
