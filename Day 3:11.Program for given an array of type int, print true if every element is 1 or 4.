@@ -1,0 +1,21 @@
+class Demo
+{
+    public static void main(String[] args) 
+    {
+                int[] array = {1, 4, 4, 1, 4, 1};
+                boolean result = checkElements(array);
+                System.out.println(result);
+    }
+            public static boolean checkElements(int[] array) 
+            {
+                for (int num : array) 
+                {
+                    if (num != 1 && num != 4) 
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+
