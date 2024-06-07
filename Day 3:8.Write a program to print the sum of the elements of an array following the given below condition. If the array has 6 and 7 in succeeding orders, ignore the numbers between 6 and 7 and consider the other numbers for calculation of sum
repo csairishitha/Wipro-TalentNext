@@ -1,0 +1,28 @@
+class Demo
+{
+    public static void main(String[] args) {
+                int[] array = {1, 3, 6, 5, 7, 8, 6, 9, 7, 10};
+                int sum = calculateSum(array);
+                System.out.println("Sum of the elements with the given condition: " + sum);
+            }
+        
+            public static int calculateSum(int[] array) {
+                int sum = 0;
+                boolean ignore = false;
+        
+                for (int num : array) {
+                    if (num == 6) {
+                        ignore = true;
+                    }
+                    if (!ignore) {
+                        sum += num;
+                    }
+                    if (ignore && num == 7) {
+                        ignore = false;
+                    }
+                }
+                
+                return sum;
+    }
+}
+        
