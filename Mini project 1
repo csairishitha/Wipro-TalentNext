@@ -1,0 +1,92 @@
+import java.util.*;
+class miniproject
+{
+    public static void main(String[]args)
+    {
+        String[][] empDetails={{"emp no","empname","join date","designation code","department","basic","hra","it"},
+                               {"1001","ashish","01/04/2009","e","r&d","20000","8000","3000"},
+                               {"1002","sushma","23/08/2012","c","pm","30000","12000","9000"},
+                               {"1003","rahul","12/11/2008","k","acct","10000","8000","1000"},
+                               {"1004","chahat","29/01/2013","r","frontdesk","12000","6000","2000"},
+                               {"1005","ranjan","16/07/2005","m","engg","50000","20000","20000"},
+                               {"1006","suman","01/01/2000","e","manufacturing","23000","9000","4400"},
+                               {"1007","tanmay","12/04/2006","c","pm","29000","12000","10000"}};
+        for(int i=0;i<=7;i++)
+        {
+            for(int j=0;j<=7;j++)
+            {
+                System.out.print(empDetails[i][j]+" ");
+            }
+            System.out.println();
+        }
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter emp id");
+    String empid=sc.nextLine();
+    int rowIndex=0;
+    String[][] empDet=new String[1][8];
+    for(int i=0;i<=7;i++)
+    {
+        if(empid.equals(empDetails[i][0]))
+        {
+            rowIndex=i;
+            empDet[0][0]=empDetails[i][0];
+            empDet[0][1]=empDetails[i][1];
+            empDet[0][2]=empDetails[i][2];
+            empDet[0][3]=empDetails[i][3];
+            empDet[0][4]=empDetails[i][4];
+            empDet[0][5]=empDetails[i][5];
+            empDet[0][6]=empDetails[i][6];
+            empDet[0][7]=empDetails[i][7];
+        }
+    }
+    if(rowIndex==0)
+    {
+        System.out.println("there is no employee"+empid);
+        System.exit(1);
+    }
+    for(int i=0;i<=7;i++)
+    {
+        for(int j=0;j<=7;j++)
+        {
+            System.out.print(empDet[i][j]+" ");
+        }
+        System.out.println();
+    }
+    System.out.println("enter basic salary");
+    int salary=0;
+    salary=Integer.parseInt(empDetails[rowIndex][5])+Integer.parseInt(empDetails[rowIndex][6])-Integer.parseInt(empDetails[rowIndex][7]);
+    System.out.println(salary);
+    String designation="";
+    char descode=empDetails[rowIndex][3].charAt(0);
+    System.out.println("updated salary");
+    switch(descode)
+    {
+        case 'e':
+        designation="engineer";
+        salary=salary+20000;
+        break;
+        case 'c':
+        designation="consultant";
+        salary=salary+32000;
+        break;
+        case 'k':
+        designation="clerk";
+        salary=salary+12000;
+        break;
+        case 'r':
+        designation="recipsanist";
+        salary=salary+15000;
+        break;
+        case 'm':
+        designation="manager";
+        salary=salary+40000;
+        break;
+        default:
+        {
+            System.out.println("invalid");
+            break;
+        }
+    }
+    System.out.println(salary);
+}
+}
